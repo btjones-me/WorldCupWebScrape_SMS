@@ -45,10 +45,10 @@ def textMe(textMessage, accountSID, authToken, twilioNumber, myNumber):
 
 URL = "https://www.telegraph.co.uk/world-cup/2018/06/26/world-cup-2018-fixtures-complete-schedule-match-results-far/"
 
-ACCOUNT_SID     = "ACce41806def7e3deea7c85ee1d49d1a3e"
-AUTH_TOKEN      = "6d1c06d14a6fa98eb891a844a8e50634"
-TWILIO_NUMBER   = "+441557280042"
-MY_NUMBER       = "+447453506915"
+ACCOUNT_SID     = load_account_sid()
+AUTH_TOKEN      = load_auth_token()
+TWILIO_NUMBER   = load_twilio_number()
+MY_NUMBER       = load_my_numer()  # INSERT
 
 TEXT_MESSAGE = getMessageContents(URL)
 textMe(TEXT_MESSAGE, ACCOUNT_SID, AUTH_TOKEN, TWILIO_NUMBER, MY_NUMBER)
